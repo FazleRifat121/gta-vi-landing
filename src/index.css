@@ -240,7 +240,12 @@ main {
 	mask-image: url("/images/big-hero-text.svg");
 	mask-repeat: no-repeat;
 }
-
+/* Only apply the mask on large screens */
+@media (max-width: 1023px) {
+	.mask-wrapper {
+		mask-image: none; /* Remove mask on smaller devices */
+	}
+}
 .animated-gradient-bg {
 	background: linear-gradient(135deg, #1e2a52 0%, #6e4b91 100%);
 }
